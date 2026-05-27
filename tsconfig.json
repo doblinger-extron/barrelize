@@ -4,7 +4,6 @@
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "alwaysStrict": true,
-    "baseUrl": ".",
     "declaration": true,
     "esModuleInterop": true,
     "exactOptionalPropertyTypes": true,
@@ -24,7 +23,7 @@
     "noUnusedParameters": true,
     "outDir": "packages/vscode/dist",
     "paths": {
-      "#lib": ["src/*", "src/index"]
+      "#lib": ["./src/*", "./src/index"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
@@ -33,7 +32,8 @@
     "strictNullChecks": true,
     "target": "ES2022",
     "useDefineForClassFields": true,
-    "useUnknownInCatchVariables": true
+    "useUnknownInCatchVariables": true,
+    "types": ["node"]
   },
   "include": ["src/**/*.ts", "test/**/*.ts"]
 }
