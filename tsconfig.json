@@ -9,31 +9,29 @@
     "exactOptionalPropertyTypes": true,
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
-    "lib": ["ES2022"],
-    "module": "ES2022",
+    "lib": ["ESNext"],
+    "module": "nodenext",
     "moduleDetection": "force",
-    "moduleResolution": "Bundler",
+    "moduleResolution": "nodenext",
     "noFallthroughCasesInSwitch": true,
     "noImplicitAny": true,
     "noImplicitOverride": true,
-    "noImplicitReturns": false,
+    "noImplicitReturns": true,
     "noImplicitThis": true,
     "noPropertyAccessFromIndexSignature": true,
+    "noUncheckedIndexedAccess": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "packages/vscode/dist",
     "paths": {
-      "#lib": ["./src/*", "./src/index"]
+      "#lib": ["./src/index.js"]
     },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "sourceMap": true,
     "strict": true,
     "strictNullChecks": true,
-    "target": "ES2022",
+    "target": "esnext",
     "useDefineForClassFields": true,
-    "useUnknownInCatchVariables": true,
-    "types": ["node"]
-  },
-  "include": ["src/**/*.ts", "test/**/*.ts"]
+    "useUnknownInCatchVariables": true
+  }
 }

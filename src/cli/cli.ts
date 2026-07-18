@@ -1,9 +1,9 @@
 import {logError, runGenerateCommand, runInitCommand} from '#lib';
 import {cac} from 'cac';
-import {name, version} from '../../package.json';
+import pkg from '../../package.json' with {type: 'json'};
 
 export function cliInit(): void {
-  const cli = cac(name);
+  const cli = cac(pkg.name);
 
   cli
     .command('[config path]', 'Generate barrel files')
@@ -20,7 +20,7 @@ export function cliInit(): void {
     .action((path = '.barrelize') => runInitCommand(path).catch(logError));
 
   cli.help();
-  cli.version(version);
+  cli.version(pkg.version);
 
   try {
     cli.parse();

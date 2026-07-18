@@ -6,7 +6,10 @@
       "name": "index.ts",
       "include": ["**/*.ts"],
       "exclude": ["**/*.test.ts"],
-      "bracketSpacing": false
+      "bracketSpacing": false,
+      "replace": {
+        "/\\.ts$/": ".js"
+      }
     }
   ]
 }

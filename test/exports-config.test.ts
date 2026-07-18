@@ -2,7 +2,7 @@ import {$Config} from '#lib';
 import {mkdirSync, readFileSync, rmSync, writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {afterEach, beforeEach, describe, expect, test} from 'vitest';
-import {generateBarrels} from '../src/generate/generate-barrels';
+import {generateBarrels} from '../src/generate/generate-barrels.js';
 
 const testDir = join(__dirname, 'test-fixtures', 'exports-config');
 
