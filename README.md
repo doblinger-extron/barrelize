@@ -54,10 +54,10 @@ npx barrelize
 
 ### `barrelize init [config path]`
 
-Creates a `.barrelize` configuration file in your project.
+Creates a `.barrelize.json` configuration file in your project.
 
 ```bash
-npx barrelize init                # Creates .barrelize in current directory
+npx barrelize init                # Creates .barrelize.json in current directory
 npx barrelize init barrelize.json # Creates config at specified path
 ```
 
@@ -72,7 +72,7 @@ Generates barrel (index) files based on your configuration. The tool will:
 - Format exports according to your style preferences
 
 ```bash
-npx barrelize                # Uses default .barrelize config
+npx barrelize                # Uses default .barrelize.json config
 npx barrelize custom.json    # Uses specified config file
 npx barrelize --watch        # Generate and watch for changes
 ```
@@ -83,7 +83,7 @@ Options:
 
 ## Configuration
 
-Create a `.barrelize` file in your project root. The configuration file uses JSON5 format, which supports comments and is more flexible than standard JSON:
+Create a `.barrelize.json` file in your project root. The configuration file uses JSON5 format, which supports comments and is more flexible than standard JSON:
 
 ```jsonc
 {
