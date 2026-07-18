@@ -35,7 +35,8 @@
   "scripts": {
     "build": "npx barrelize && npm run schema && vite build",
     "schema": "tsx scripts/schema.script.ts > schema.json",
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepublish": "npm run build"
   },
   "devDependencies": {
     "@babel/parser": "^8.0.4",
