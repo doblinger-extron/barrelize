@@ -53,6 +53,7 @@ export async function runInitCommand(baseConfigFilePath: string) {
 }
 
 function createCjsTemplate(): string {
+  // INITIAL_CONFIG_CJS is equal to INITIAL_CONFIG sans the $schema property
   const {$schema, ...INITIAL_CONFIG_CJS} = INITIAL_CONFIG;
 
   return `/**
@@ -70,6 +71,7 @@ module.exports = config;
 }
 
 function createMjsTemplate(): string {
+  // INITIAL_CONFIG_MJS is equal to INITIAL_CONFIG sans the $schema property
   const {$schema, ...INITIAL_CONFIG_MJS} = INITIAL_CONFIG;
 
   return `/**

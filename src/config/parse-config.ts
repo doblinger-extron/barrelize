@@ -48,6 +48,7 @@ async function loadConfig(configPath: string): Promise<Config> {
     case '.mjs':
     case '.cjs': {
       const module = await import(pathToFileURL(configPath).href);
+      // checks to ensure the configuration file exports the config as default
       if (!('default' in module)) {
         throw new Error(
           `Invalid barrelize config:\nConfig file "${configPath}" must export a default configuration.`,
